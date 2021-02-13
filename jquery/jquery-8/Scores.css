@@ -1,0 +1,23 @@
+body{
+    font-family: sans-serif;
+}
+
+table{
+    background-color: #E8DCFF;
+    border-collapse: collapse;
+    border: 1px solid
+}
+table, td, th {
+    border: 1px solid black;
+}
+
+input{
+    background-color: #FEFFB0;
+    font-weight: bold;
+    text-align: right;
+}
+.sum1 {
+    color: 174C68;
+    font-size: 18px;
+    font-weight: bold;
+}

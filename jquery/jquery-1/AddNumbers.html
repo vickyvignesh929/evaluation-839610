@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+        }
+        th, td {
+  padding: 15px;
+}
+th {
+  text-align: left;
+}
+        </style>
+<body>
+
+<h2>Addition of two numbers</h2>
+<div id="display_message" style="display:none;">55</div>
+<table style="width:100%">
+  <tr>
+    <th>Enter first number</th>
+    <th><input type="number" name="number1" placeholder="Enter first number" id="number1" required/></input></th> 
+  </tr>
+  <tr>
+    <th>Enter second number</th>
+    <th><input type="number" name="number2" placeholder="Enter second number" id="number2" required/></input></th> 
+  </tr>
+  <tr>
+    <th>Answer</th>
+    <th><input type="number" name="number3" placeholder="Answer" id="number3"></input></th> 
+  </tr>
+  <tr>
+    <th>Submit</th>
+    <th><button type="button" onclick="submit();">Add</button></th> 
+  </tr>
+</table>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript">
+function submit()
+{
+   $("#display_message").show();
+   if($("#number1").val()=="" || $("#number2").val()=="")
+   {
+      $("#display_message").html("<font color='red'>Enter the Value First</font>");
+   }
+   else
+  {
+    var answer=parseInt($("#number1").val()) + parseInt($("#number2").val())
+       
+    $("#display_message").html("<font color='green'><b>"+answer+"</b></font>");
+ $("#number3").val(answer);
+ 
+   }
+}
+</script>
+</body>
+</html>

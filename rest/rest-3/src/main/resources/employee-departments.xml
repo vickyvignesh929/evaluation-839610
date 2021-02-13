@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+                xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+                xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+                xmlns:task="http://www.springframework.org/schema/task"
+                xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.2.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.2.xsd">
+
+
+<!-- Hands-on 1 -->
+<bean id="1" class="com.cognizant.springlearnemployee.Entity.Employee" scope="prototype">
+
+	<property name="name" value="Mr.xyz" />
+	<property name="department" value="Developer" />
+	<property name="location" value="Coimbatore" />
+
+</bean>
+<bean id="2" class="com.cognizant.springlearnemployee.Entity.Employee" scope="prototype">
+
+	<property name="name" value="Mr.ABC" />
+	<property name="department" value="HR" />
+	<property name="location" value="Bangalore" />
+
+</bean>
+<bean id="3" class="com.cognizant.springlearnemployee.Entity.Employee" scope="prototype">
+
+	<property name="name" value="Mr.DEF" />
+	<property name="department" value="Tester" />
+	<property name="location" value="Chennai" />
+
+</bean>
+<bean id="4" class="com.cognizant.springlearnemployee.Entity.Employee" scope="prototype">
+
+	<property name="name" value="Mr.MNO" />
+	<property name="department" value="Tech Lead" />
+	<property name="location" value="Mumbai" />
+
+</bean>
+
+<bean id="employeeList" class="java.util.ArrayList">
+	<constructor-arg>
+		<list>
+			<ref bean="1"></ref>
+			<ref bean="2"></ref>
+			<ref bean="3"></ref>
+			<ref bean="4"></ref>
+		</list>
+	</constructor-arg>
+</bean> 
+
+<!-- Department - Hands-on -2 -->
+<bean id="d1" class="com.cognizant.springlearnemployee.Entity.Department" scope="prototype">
+	<property name="department" value="Developer" />
+</bean>
+<bean id="d2" class="com.cognizant.springlearnemployee.Entity.Department" scope="prototype">
+	<property name="department" value="HR" />
+</bean>
+<bean id="d3" class="com.cognizant.springlearnemployee.Entity.Department" scope="prototype">
+	<property name="department" value="Tester" />
+</bean>
+<bean id="d4" class="com.cognizant.springlearnemployee.Entity.Department" scope="prototype">
+	<property name="department" value="Tech Lead" />
+</bean>
+
+<bean id="departmentList" class="java.util.ArrayList">
+	<constructor-arg>
+		<list>
+			<ref bean="d1"></ref>
+			<ref bean="d2"></ref>
+			<ref bean="d3"></ref>
+			<ref bean="d4"></ref>
+		</list>
+	</constructor-arg>
+</bean> 
+
+</beans>
