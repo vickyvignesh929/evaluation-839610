@@ -1,0 +1,4 @@
+create database AuthenticationDb;
+create database ProductDb;
+create database ShoppingCartDb;
+create database OrderDb;
